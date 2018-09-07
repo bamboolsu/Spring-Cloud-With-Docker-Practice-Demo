@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: microservice-provider-user
+  cloud:
+    config:
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        serviceId: microservice-config-server
+#      username: user
+#      password: admin
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:admin@localhost:8761/eureka/

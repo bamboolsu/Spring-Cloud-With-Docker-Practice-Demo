@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: microservice-consumer-movie
+  cloud:
+    config:
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        serviceId: microservice-config-server
+#      username: user
+#      password: admin
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      defaultZone: http://user:admin@localhost:8761/eureka/
+management:
+  security:
+    enabled: false

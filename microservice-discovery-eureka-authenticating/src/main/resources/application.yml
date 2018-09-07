@@ -1,0 +1,17 @@
+server:
+  port: 8763
+eureka:
+  instance:
+    hostname: peer3
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: microservice-discovery-eureka-authenticating
+security:
+  basic:
+    enabled: true   #开启基于HTTP basic的认证
+  user:
+    name: user    #配置登录的账号
+    password: password123   #配置登录的密码

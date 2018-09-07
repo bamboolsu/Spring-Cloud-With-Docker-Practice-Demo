@@ -1,0 +1,7 @@
+encrypt:
+  key-store:
+    location: config-server.keystore
+    alias: config-server
+    password: hjw123
+    secret: hjw123
+  #  key: wei

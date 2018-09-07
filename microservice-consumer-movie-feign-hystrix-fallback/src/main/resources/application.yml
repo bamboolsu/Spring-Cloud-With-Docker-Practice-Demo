@@ -1,0 +1,16 @@
+server:
+    port: 8011
+spring:
+  application:
+    name: microservice-consumer-movie-feign-hystrix-fallback-stream
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:admin@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream

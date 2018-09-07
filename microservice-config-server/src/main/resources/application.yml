@@ -1,0 +1,43 @@
+server:
+  port: 8082
+spring:
+  application:
+    name:  microservice-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/hjwzyy/spring-cloud-edgware-configServer-demo
+          username: hwacer@outlook.com
+          password: hjw7856
+        health:
+          enabled: true
+          repositories:
+            microservice-user:
+              label: master
+              name: microservice-provider-user
+              profiles: dev
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:admin@localhost:8761/eureka/
+  instance:
+     prefer-ip-address: true
+management:
+  security:
+    enabled: false
+
+#security:
+#  basic:
+#    enabled: true                     #开启HTTP basic的认证
+#  user:
+#    name: user                        #配置登录账号证
+#    password: admin                   #配置登录密码
+
+
