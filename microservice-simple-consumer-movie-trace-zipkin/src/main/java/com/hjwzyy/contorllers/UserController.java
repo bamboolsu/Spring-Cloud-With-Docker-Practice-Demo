@@ -1,14 +1,12 @@
 package com.hjwzyy.contorllers;
 
-import com.hjwzyy.dao.UserRepository;
 import com.hjwzyy.pojo.User;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.client.RestTemplate;
 
 /**
  * @author jiangwei.huang@hand-china.com.
@@ -19,15 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class UserController {
-    Logger logger = LoggerFactory.getLogger(UserController.class);
     @Autowired
-    private UserRepository userRepository;
+    private RestTemplate restTemplate;
+    @Value("${user.userServiceUrl}")
+    private String userServiceUrl;
 
-    @GetMapping("/{id}")
+    @GetMapping("/user/{id}")
     public User findById(@PathVariable Long id){
-        User findOne = this.userRepository.getOne(id);
-        logger.info("找到用户 ： {}",findOne);
-        logger.debug("debug",findOne);
-        return findOne;
+        return this.restTemplate.getForObject(this.userServiceUrl + id,User.class);
     }
 }
