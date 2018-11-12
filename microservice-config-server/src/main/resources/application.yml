@@ -8,8 +8,8 @@ spring:
       server:
         git:
           uri: https://github.com/hjwzyy/spring-cloud-edgware-configServer-demo
-          username: hwacer@outlook.com
-          password: hjw7856
+          username: *****
+          password: *****
         health:
           enabled: true
           repositories:

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: microservice-trace-zipkin-server
+    name: microservice-trace-zipkin-server-stream-mysql
   rabbitmq:
     host: localhost
     port: 5672
