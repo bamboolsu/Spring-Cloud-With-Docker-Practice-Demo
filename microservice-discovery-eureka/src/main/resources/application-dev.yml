@@ -1,0 +1,18 @@
+
+security:
+  basic:
+    enabled: true                     #开启HTTP basic的认证
+  user:
+    name: user                        #配置登录账号证
+    password: admin                   #配置登录密码
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: peer1                   # 指定当profile=peer1时，主机名是peer1
+    prefer-ip-address: false
+  client:
+    serviceUrl:
+      defaultZone: http://user:admin@peer2:8762/eureka/,http://user:admin@peer3:8763/eureka/      # 将自己注册到peer2和peer3这两个Eureka上面去
+    register-with-eureka: true
+    fetch-registry: true

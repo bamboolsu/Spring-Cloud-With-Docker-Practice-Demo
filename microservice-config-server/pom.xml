@@ -58,19 +58,14 @@
 			</plugin>
 			<plugin>
 				<groupId>com.spotify</groupId>
-				<artifactId>docker-maven-plugin</artifactId>
-				<version>0.4.13</version>
+				<artifactId>dockerfile-maven-plugin</artifactId>
+				<version>${docker.plugin.version}</version>
 				<configuration>
-					<imageName>hjwjw/microservice-config-server:0.0.1</imageName>
-					<baseImage>livingobjects/jre8</baseImage>
-					<entryPoint>["java","-jar","/${project.build.finalName}.jar"]</entryPoint>
-					<resources>
-						<resource>
-							<targetPath>/</targetPath>
-							<directory>${project.build.directory}</directory>
-							<include>${project.build.finalName}.jar</include>
-						</resource>
-					</resources>
+					<repository>${docker.image.prefix}/${project.artifactId}</repository>
+					<tag>${project.version}</tag>
+					<buildArgs>
+						<JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+					</buildArgs>
 				</configuration>
 			</plugin>
 		</plugins>
