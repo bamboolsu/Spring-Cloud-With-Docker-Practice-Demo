@@ -64,8 +64,8 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <imageName>microservice-config-server</imageName>
-                    <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+                    <imageName>hjwjw/${project.artifactId}</imageName>
+                    <dockerDirectory>./</dockerDirectory>
                     <!--<buildArgs>
                         <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>-->
