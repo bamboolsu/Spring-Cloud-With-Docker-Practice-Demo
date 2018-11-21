@@ -1,6 +1,7 @@
 FROM livingobjects/jre8
 LABEL maintainer="hjwjw"
-ADD microservice-config-server-0.0.1-SNAPSHOT.jar app.jar
+ARG JAR_FILE
+ADD ${JAR_FILE} app.jar
 RUN bash -c 'touch /app.jar'
-EXPOSE 8082
+EXPOSE 8010
 ENTRYPOINT ["java","-Djava.security.egd=file:dev/./urandom","-jar","/app.jar"]

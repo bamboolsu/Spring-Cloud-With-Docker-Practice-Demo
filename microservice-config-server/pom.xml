@@ -66,9 +66,9 @@
                 <configuration>
                     <imageName>microservice-config-server</imageName>
                     <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
-                    <buildArgs>
+                    <!--<buildArgs>
                         <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
-                    </buildArgs>
+                    </buildArgs>-->
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
