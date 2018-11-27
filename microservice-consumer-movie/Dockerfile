@@ -1,4 +1,4 @@
-FROM livingobjects/jre8
+FROM openjdk:8-jre
 VOLUME /tmp
 ARG JAR_FILE
 ADD ${JAR_FILE} app.jar
