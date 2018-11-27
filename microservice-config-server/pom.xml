@@ -51,7 +51,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <plugin>
+            <!--<plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>1.2.0</version>
@@ -66,9 +66,9 @@
                 <configuration>
                     <imageName>hjwjw/${project.artifactId}</imageName>
                     <dockerDirectory>./</dockerDirectory>
-                    <!--<buildArgs>
+                    &lt;!&ndash;<buildArgs>
                         <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
-                    </buildArgs>-->
+                    </buildArgs>&ndash;&gt;
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
@@ -77,8 +77,8 @@
                         </resource>
                     </resources>
                 </configuration>
-            </plugin>
-            <!--<plugin>
+            </plugin>-->
+            <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
                 <version>${docker.plugin.version}</version>
@@ -89,7 +89,7 @@
                         <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>
                 </configuration>
-            </plugin>-->
+            </plugin>
         </plugins>
     </build>
 

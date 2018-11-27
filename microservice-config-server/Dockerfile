@@ -1,5 +1,7 @@
-FROM openjdk:8-jre
-ADD target/microservice-config-server-0.0.1-SNAPSHOT.jar app.jar
+FROM livingobjects/jre8
+VOLUME /tmp
+ARG JAR_FILE
+ADD ${JAR_FILE} app.jar
 RUN bash -c 'touch /app.jar'
 EXPOSE 8082
 ENTRYPOINT ["java","-Djava.security.egd=file:dev/./urandom","-jar","/app.jar"]
