@@ -1,6 +1,8 @@
 version: '2'
 services:
     eureka:
-        build: .
+        build:
+          context: ./
+          image: hjwjw/microservice-discovery-eureka:latest
         ports:
           - "8761:8761"
