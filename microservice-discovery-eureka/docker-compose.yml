@@ -3,6 +3,6 @@ services:
     eureka:
         build:
           context: ./
-          image: hjwjw/microservice-discovery-eureka:latest
+        image: hjwjw/microservice-discovery-eureka:latest
         ports:
           - "8761:8761"
