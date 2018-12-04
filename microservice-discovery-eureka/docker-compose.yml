@@ -1,6 +1,6 @@
 version: '2'
 services:
     eureka:
-        build: .
+        build: /target/.
         ports:
           - "8761:8761"
