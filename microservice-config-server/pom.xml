@@ -83,15 +83,15 @@
                 <artifactId>dockerfile-maven-plugin</artifactId>
                 <version>${docker.plugin.version}</version>
                 <!--放开这块注释，则运行mvn deploy命令就会打包镜像-->
-                <!--<executions>
+                <executions>
                     <execution>
                         <id>default</id>
                         <goals>
                             <goal>build</goal>
-                            &lt;!&ndash;<goal>push</goal>&ndash;&gt;
+                            <!--<goal>push</goal>-->
                         </goals>
                     </execution>
-                </executions>-->
+                </executions>
                 <configuration>
                     <repository>${docker.image.prefix}/${project.artifactId}</repository>
                     <!--<tag>${project.version}</tag>-->
