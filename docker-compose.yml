@@ -9,3 +9,9 @@ services:
         image: hjwjw/microservice-discovery-eureka:latest
         ports:
           - "8761:8761"
+        depends_on:
+          - config
+    config:
+        image: hjwjw/microservice-config-server:latest
+        ports:
+          - "8082:8082"
