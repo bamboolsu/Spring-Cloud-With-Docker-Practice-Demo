@@ -15,18 +15,18 @@ services:
         image: hjwjw/microservice-config-server:latest
         ports:
           - "8082:8082"
-    provider:
-        image: hjwjw/microservice-provider-user:latest
-        ports:
-          - "8005:8005"
-        depends_on:
-          - config
-          - eureka
-    consumer:
-        image: hjwjw/microservice-consumer-movie:latest
-        ports:
-          - "8010:8010"
-        depends_on:
-          - config
-          - eureka
-          - provider
+#    provider:
+#        image: hjwjw/microservice-provider-user:latest
+#        ports:
+#          - "8005:8005"
+#        depends_on:
+#          - config
+#          - eureka
+#    consumer:
+#        image: hjwjw/microservice-consumer-movie:latest
+#        ports:
+#          - "8010:8010"
+#        depends_on:
+#          - config
+#          - eureka
+#          - provider
