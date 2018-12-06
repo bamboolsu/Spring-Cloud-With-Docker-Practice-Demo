@@ -10,11 +10,11 @@ spring:
         serviceId: config
 #      username: user
 #      password: admin
-#  rabbitmq:
-#    host: localhost
-#    port: 5672
-#    username: guest
-#    password: guest
+  rabbitmq:
+    host: 172.31.1.17
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   client:
     healthcheck:

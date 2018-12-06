@@ -18,7 +18,7 @@ spring:
               name: microservice-provider-user
               profiles: dev
   rabbitmq:
-    host: localhost
+    host: 172.31.1.17
     port: 5672
     username: guest
     password: guest
@@ -26,7 +26,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://user:admin@192.168.11.137:8761/eureka/
+      defaultZone: http://user:admin@eureka:8761/eureka/
   instance:
      prefer-ip-address: true
 management:
