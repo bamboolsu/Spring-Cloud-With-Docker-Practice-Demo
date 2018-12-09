@@ -2,7 +2,7 @@ server:
     port: 8011
 
 user:
-    userServiceUrl: http://192.168.11.142:8000/
+    userServiceUrl: http://192.168.11.142:8010/
 #management:
 #  endpoint:
 #    health:
