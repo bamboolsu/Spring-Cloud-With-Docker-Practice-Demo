@@ -16,7 +16,7 @@ services:
     microservice-simple-provider-user:
         image: hjwjw/microservice-simple-provider-user:latest
         ports:
-          - "8000:8000"
+          - "8010:8010"
         depends_on:
           - eureka
     microservice-simple-consumer-movie:
