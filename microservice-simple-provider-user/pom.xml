@@ -22,10 +22,6 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
@@ -37,18 +33,8 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-
-		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
@@ -63,18 +49,18 @@
 				<artifactId>dockerfile-maven-plugin</artifactId>
 				<version>${docker.plugin.version}</version>
 				<!--放开这块注释，则运行mvn deploy命令就会打包镜像-->
-				<!--<executions>
+				<executions>
                     <execution>
                         <id>default</id>
                         <goals>
                             <goal>build</goal>
-                            &lt;!&ndash;<goal>push</goal>&ndash;&gt;
+                            <!--<goal>push</goal>-->
                         </goals>
                     </execution>
-                </executions>-->
+                </executions>
 				<configuration>
 					<repository>${docker.image.prefix}/${project.artifactId}</repository>
-					<tag>${project.version}</tag>
+					<!--<tag>${project.version}</tag>-->
 					<buildArgs>
 						<JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
 					</buildArgs>
