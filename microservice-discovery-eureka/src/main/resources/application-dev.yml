@@ -9,7 +9,7 @@ server:
   port: 8761
 eureka:
   instance:
-    hostname: peer1                   # 指定当profile=peer1时，主机名是peer1
+    hostname: eureka                   # 指定当profile=peer1时，主机名是peer1
     prefer-ip-address: false
   client:
     serviceUrl:
