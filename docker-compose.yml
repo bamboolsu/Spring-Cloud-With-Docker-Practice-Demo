@@ -5,7 +5,7 @@ services:
           context: ./microservice-discovery-eureka
           dockerfile: Dockerfile
           args:
-            JAR_FILE: ./microservice-discovery-eureka/target/microservice-discovery-eureka-0.0.1-SNAPSHOT.jar
+            JAR_FILE: target/microservice-discovery-eureka-0.0.1-SNAPSHOT.jar
 #        image: hjwjw/microservice-discovery-eureka:latest
         ports:
           - "8761:8761"
@@ -18,7 +18,7 @@ services:
           context: ./microservice-simple-provider-user
           dockerfile: Dockerfile
           args:
-            JAR_FILE: ./microservice-simple-provider-user/target/microservice-simple-provider-user-0.0.1-SNAPSHOT.jar
+            JAR_FILE: target/microservice-simple-provider-user-0.0.1-SNAPSHOT.jar
 #        image: hjwjw/microservice-simple-provider-user:latest
         ports:
           - "8010:8010"
@@ -27,7 +27,7 @@ services:
           context: ./microservice-simple-consumer-movie
           dockerfile: Dockerfile
           args:
-            JAR_FILE: ./microservice-simple-consumer-movie/target/microservice-simple-provider-user-0.0.1-SNAPSHOT.jar
+            JAR_FILE: target/microservice-simple-provider-user-0.0.1-SNAPSHOT.jar
 #        image: hjwjw/microservice-simple-consumer-movie:latest
         ports:
           - "8011:8011"
