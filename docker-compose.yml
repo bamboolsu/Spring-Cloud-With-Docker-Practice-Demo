@@ -27,7 +27,7 @@ services:
           context: ./microservice-simple-consumer-movie
           dockerfile: Dockerfile
           args:
-            JAR_FILE: target/microservice-simple-provider-user-0.0.1-SNAPSHOT.jar
+            JAR_FILE: target/microservice-simple-consumer-movie-0.0.1-SNAPSHOT.jar
 #        image: hjwjw/microservice-simple-consumer-movie:latest
         ports:
           - "8011:8011"
