@@ -1,13 +1,13 @@
 server:
     port: 8011
 user:
-    userServiceUrl: http://localhost:8010/
+    userServiceUrl: http://192.168.11.142:8010/
 eureka:
   client:
     healthcheck:
       enabled: false
     service-url:
-      defaultZone: http://user:admin@localhost:8761/eureka/
+      defaultZone: http://user:admin@192.168.11.142:8761/eureka/
 spring:
   application:
     name: microservice-simple-consumer-movie
