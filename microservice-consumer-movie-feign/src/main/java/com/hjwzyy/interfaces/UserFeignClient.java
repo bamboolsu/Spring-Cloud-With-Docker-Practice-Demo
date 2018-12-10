@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.Map;
 
 /**
- * @author jiangwei.huang@hand-china.com.
+ * @author
  * @version 1.0
  * @name
  * @description

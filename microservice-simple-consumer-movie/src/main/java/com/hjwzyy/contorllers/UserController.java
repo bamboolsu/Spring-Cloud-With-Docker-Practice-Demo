@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author jiangwei.huang@hand-china.com.
+ * @author
  * @version 1.0
  * @name
  * @description

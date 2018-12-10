@@ -1,14 +1,14 @@
 server:
     port: 8011
-
 user:
-    userServiceUrl: http://192.168.11.142:8010/
-#management:
-#  endpoint:
-#    health:
-#      show-details: always
-#    info:
-#      enabled: false
-#  server:
-#    port: 8012
+    userServiceUrl: http://localhost:8010/
+eureka:
+  client:
+    healthcheck:
+      enabled: false
+    service-url:
+      defaultZone: http://user:admin@localhost:8761/eureka/
+spring:
+  application:
+    name: microservice-simple-consumer-movie
 
